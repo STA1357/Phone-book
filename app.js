@@ -1,3 +1,5 @@
+
+
 window.onload = function() {
     const localKey = 'contactsCollection';
     const form = document.querySelector('form');
@@ -8,10 +10,14 @@ window.onload = function() {
     const userEmail = document.getElementById('emailInput');
     const userBirth = document.getElementById('birthInput');
 
+    
+
     let contactsList = getContacts();
     let activeContact = null;
 
     generateContactList();
+
+    
 
     function getContacts() {
         const res = localStorage.getItem(localKey);
@@ -54,6 +60,7 @@ window.onload = function() {
         contactsList.forEach((contact) => {
             const { id, name, lastName, phone, mail, birthDay } = contact;
             const container = document.createElement('div');
+            
             container.onclick = () => setActiveContact(id);
             container.id = `contact-${id}`;
             const title = document.createElement('li');
@@ -82,8 +89,9 @@ window.onload = function() {
                 container.removeChild(title);
                 container.removeChild(infoList);
                 deleteBtn.style.display = 'none';
-            
+
             })
+
 
             //const btn = document.createElement('button');
             //btn.onclick = () => !deleteContact(removeId);
@@ -143,7 +151,27 @@ window.onload = function() {
         recordContact(contact);
         console.log(contact);
     }
+
+
+
 }
+
+function removeAll(){
+    window.localStorage.clear();
+    document.location.reload();
+}
+
+
+function newFunction() {
+    return document.getElementById('contactsCount');
+}
+//function move_up() {
+//document.getElementById('list-container').scrollTop += 10;
+//}
+
+//function move_down() {
+//document.getElementById('list-container').scrollTop -= 10;
+//}
 
 // const form = document.querySelector('form')
 // const list = document.getElementById('users')
