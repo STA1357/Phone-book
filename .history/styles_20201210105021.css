@@ -1,0 +1,5 @@
+.selected{
+    background-color: skyblue;
+    color: black;
+    text-shadow: 0.5px 0.5px grey;
+}

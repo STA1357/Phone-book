@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <form action="#">
+
+        <header>
+            <div class="header-title">
+                <h1>Phone-Book</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <label for="name">Name:</label>
+                <input type="text" id="nameInput">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lnameInput">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lnameInput">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lnameInput">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lnameInput">
+            </div>
+            
+        </main>
+
+        <button onclick="return addUser()" type="submit" id="btnAdd">Add Contact</button>
+    </form>
+
+    <h2>Contact List:</h2>
+    <ul id="users"></ul> 
+
+    <script src="./app.js"></script>
+</body>
+</html>

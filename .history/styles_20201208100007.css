@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategray;
+}
+
+form{
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 40%;
+}
+header{
+    text-align: center;
+}
+
+main{
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+.container{
+    margin-left: 35%;
+    text-align: center;
+    width: 30%;
+}
+
+.btn{
+    padding: 20px;
+    text-align: center;
+}
+
+input{
+    width: 200px;
+}

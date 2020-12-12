@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    background-color: darkslategray;
+}
+
+form{
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 50%;
+}
+header{
+    text-align: center;
+}
+
+main{
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+.container{
+    margin-left: 35%;
+    text-align: center;
+    width: auto;
+}
+
+.btn{
+    padding: 20px;
+    text-align: center;
+}
+
+input{
+    width: 200px;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+}
+.list-container{
+    margin-top: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.selected{
+    background-color: skyblue;
+    color: black;
+    text-shadow: 0.5px 0.5px grey;
+}
+
+.deleteBtn::before{
+    color: brown;
+    content: "delete";
+}

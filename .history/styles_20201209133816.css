@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategray;
+}
+
+form{
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 50%;
+}
+header{
+    text-align: center;
+}
+
+main{
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+.container{
+    margin-left: 35%;
+    text-align: center;
+    width: 30%;
+}
+
+.btn{
+    padding: 20px;
+    text-align: center;
+}
+
+input{
+    width: 200px;
+}
+
+h2{
+    text-align: center;
+}
+.list-container{
+    margin-top: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.selected {
+    background-color: pink;
+}
+
+.deleteBtn{
+    width: 100px;
+    height: 20px;
+    content: "delete";
+}

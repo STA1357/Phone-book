@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+form{
+    
+    background-color: rgb(144, 156, 179);
+    width: 400px;
+    max-width: 100%;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+main{
+    margin-left: 25%;
+}
+
+.container{
+    text-align: center;
+    display: block;
+    width: 70%;
+}
+
+.list-container{
+    background-color: rgb(144, 156, 179);
+    width: 400px;
+    max-width: 100%;
+    page-break-after: 30px 40px;
+    border-radius: 5px;
+}
+
+h2{
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.btn{
+    padding: 20px 0;
+}
+
+
+.selected{
+    background-color: skyblue;
+    color: black;
+    text-shadow: 0.5px 0.5px grey;
+}
+
+.deleteBtn::before{
+    color: brown;
+    content: "delete";
+}
+
+div{
+    padding: 5px;
+}
+
+li{
+    font-weight: bold;
+    font-style: italic;
+}

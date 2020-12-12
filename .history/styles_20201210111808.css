@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+form{
+    
+    background-color: rgb(144, 156, 179);
+    padding: 10px;
+    
+}
+
+.container{
+    text-align: center;
+}
+
+.list-container{
+    background-color: rgb(144, 156, 179);
+    padding: 10px;
+    margin-left: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.selected{
+    background-color: skyblue;
+    color: black;
+    text-shadow: 0.5px 0.5px grey;
+}
+
+.deleteBtn::before{
+    color: brown;
+    content: "delete";
+}
+
+div{
+    padding: 5px;
+}
+
+li{
+    font-weight: bold;
+    font-style: italic;
+}

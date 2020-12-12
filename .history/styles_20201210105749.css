@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+form{
+    width: 50%;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.selected{
+    background-color: skyblue;
+    color: black;
+    text-shadow: 0.5px 0.5px grey;
+}
+
+.deleteBtn::before{
+    color: brown;
+    content: "delete";
+}
+
+div{
+    padding: 5px;
+}
+
+li{
+    font-weight: bold;
+    font-style: italic;
+}

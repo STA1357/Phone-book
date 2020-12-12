@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategray;
+}
+
+form{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+header{
+    text-align: center;
+}
+
+main{
+    flex-direction: column;
+}

@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url("./wp3990421-office-wallpapers.jpg") no-repeat fixed center center;
+    background-size: cover;
+}
+
+.header-title{
+    color: white;
+    text-shadow: 0.5px 0.5px black;
+}
+
+form{
+    max-height: 500px;
+    background-color: rgba(144, 156, 179, 0.589);
+    width: 400px;
+    max-width: 100%;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+main{
+    margin-left: 25%;
+}
+
+.container{
+    text-align: center;
+    display: block;
+    width: 70%;
+}
+
+.list-container{
+    background-color: rgba(144, 156, 179, 0.589);
+    width: 400px;
+    max-width: 100%;
+    page-break-after: 30px 40px;
+    border-radius: 5px;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.listTitle{
+    color: white;
+    text-shadow: 0.7px 0.7px black;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+    background-color: rgba(144, 156, 179, 0.589);
+}
+
+.titleLi{
+    color: rgb(15, 87, 129);
+    text-shadow: 0.5px 0.5px black;
+    font-size: 22px;
+}
+
+.infoList{
+    color: black;
+    font-size: 18px;
+}
+
+h2{
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	
+	width: 100%;
+}
+
+.restBtn{
+    border-radius: 3px;
+    background-color: rgb(22, 163, 163);
+    text-align: center;
+    color: white;
+    
+}
+
+.delete-png{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -6px;
+    margin-left: 200px;
+}
+
+.btn{
+    padding: 20px 0;
+}
+
+
+.selected{
+    background-color: skyblue;
+    color: black;
+    text-shadow: 0.5px 0.5px grey;
+}
+
+.deleteBtn::before{
+    color: brown;
+    content: "delete";
+    font-weight: bold;
+}
+
+.deleteAll::before{
+    color: brown;
+    content: "delete";
+}
+
+div{
+    padding: 5px;
+}
+
+li{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.clearBook{
+    display: block;
+    position: fixed;
+    
+}
+
+.clearBookBtn{
+    margin-top: 570px;
+    margin-left: 50px;
+    background-color: brown;
+    color: white;
+    border-radius: 3px;
+}
+
+.form-control.success input{
+    border-color: rgb(18, 206, 18);
+}
+
+.form-control.error input{
+    border-color: rgb(224, 68, 68);
+}
+
+
+.form-control small {
+	color: rgb(224, 68, 68);
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.active {
+    background-color: gray;
+}

@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
+header{
+    text-align: center;
+}
