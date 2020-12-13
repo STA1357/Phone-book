@@ -170,3 +170,13 @@ li{
 .active {
     background-color: rgba(17, 116, 173, 0.424);
 }
+
+.dateNow{
+    font-style: italic;
+    font-size: 22px;
+    font-weight: bold;
+    position: fixed;
+    margin-top: 580px;
+    margin-right: 1150px;
+    color: rgba(84, 90, 102, 0.801);
+}

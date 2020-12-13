@@ -17,9 +17,12 @@ window.onload = function() {
     compareDates();
 
     function compareDates() {
+        const calendar = document.getElementById('dateNow');
         const today = new Date().toDateString();
+        calendar.innerHTML = today;
         const todayBirthDays = contactsList.filter(({ birthDay }) => new Date(birthDay).toDateString() === today);
         if (todayBirthDays.length) {
+            alert(`Today is ${{name}} birthday!`)
             console.log(todayBirthDays);
         }
     }
@@ -173,22 +176,19 @@ window.onload = function() {
         list.innerHTML = '';
         list.appendChild(fragment);
 
-        
-    }
+        }
 
-    function getId() {
+function getId() {
         return '_' + Math.random().toString(36).substr(2, 9);
     };
 }
-
 function removeAll(){
     if(window.confirm("This action will remove all contacts. Are you sure?")){
         window.localStorage.clear();
         document.location.reload();
     }
 }
-
-
 function newFunction() {
     return document.getElementById('contactsCount');
 }
+
