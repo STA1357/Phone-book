@@ -9,6 +9,7 @@ window.onload = function() {
     const userTel = document.getElementById('telInput');
     const userEmail = document.getElementById('emailInput');
     const userBirth = document.getElementById('birthInput');
+    const userPhoto = document.getElementById('myFileInput');
 
     let contactsList = getContacts();
     let activeContact = {};
@@ -16,14 +17,27 @@ window.onload = function() {
     generateContactList();
     compareDates();
 
+
     function compareDates() {
         const calendar = document.getElementById('dateNow');
         const today = new Date().toDateString();
         calendar.innerHTML = today;
         const todayBirthDays = contactsList.filter(({ birthDay }) => new Date(birthDay).toDateString() === today);
         if (todayBirthDays.length) {
-            alert(`Today is ${{name}} birthday!`)
+            showModal();
             console.log(todayBirthDays);
+        }
+    }
+    
+
+    function showModal(){
+        let modal = document.getElementById('myModal');
+        modal.style.display = "block";
+        let modalPar = document.getElementById('modalP');
+        modalPar.innerText = "Today is " + {userName} + "birthday";
+        let span = document.getElementById('close');
+        span.onclick = function(){
+            modal.style.display = "none";
         }
     }
     //validation
@@ -36,7 +50,9 @@ window.onload = function() {
                 lastName: userLname.value,
                 phone: userTel.value,
                 mail: userEmail.value,
-                birthDay: userBirth.value
+                birthDay: userBirth.value,
+                photo: userPhoto.value
+                
             }
             if (Object.keys(activeContact).length) {
                 updateContact(contact);
@@ -108,22 +124,19 @@ window.onload = function() {
         const switchButton = document.getElementById('btnAdd');
         switchButton.innerText = "Update";
     }
-    function switchButtonTitle2(){
-        const switchButton2 = document.getElementById('btnAdd');
-        switchButton2.innerText = "Add contact";
-    }
+    
 
     function setActiveContact(contact) {
         activeContact = contact;
         const contacts = document.querySelectorAll('.contact-item');
-        const { id = "", name = "", lastName = "", phone = "", mail = "", birthDay = "" } = contact;
+        const { id = "", name = "", lastName = "", phone = "", mail = "", birthDay = "", photo = "" } = contact;
             contacts.forEach((contact) => {
                 if (contact.id === `contact-${id}`) {
                     contact.classList.add('active');
-                    switchButtonTitle();
+
                 } else {
                     contact.classList.remove('active');
-                    switchButtonTitle2();
+                    switchButtonTitle();
                 }
             })
             userName.value = name;
@@ -131,6 +144,7 @@ window.onload = function() {
             userTel.value = phone;
             userEmail.value = mail;
             userBirth.value = birthDay;
+            userPhoto.value = photo;
     }
 
     function generateContactList() {
@@ -146,14 +160,26 @@ window.onload = function() {
             title.className = 'titleLi'
             title.innerText = `${name} ${lastName}`;
             
-            const infoList = document.createElement('b');
+            const infoList = document.createElement('div');
             infoList.className = 'infoList'
             infoList.innerText = `${phone} 
             ${mail}
             ${birthDay}`;
+
+            const infoListPhoto = document.createElement('img');
+            infoListPhoto.className = "infoListPhoto";
+            infoListPhoto.alt = "Image preview...";
+            let size = '70px';
+            infoListPhoto.height = size;
+            infoListPhoto.width = size;
+            
+            
             // phonesList.innerText = phones.join(' ');
             container.appendChild(title);
+            container.appendChild(infoListPhoto);
             container.appendChild(infoList);
+            
+            
             const deleteBtn = document.createElement('button');
             deleteBtn.className = 'deleteBtn'
             container.appendChild(deleteBtn);
@@ -162,7 +188,7 @@ window.onload = function() {
             })
             fragment.appendChild(container);
             
-            deleteBtn.addEventListener('click', function (e) {
+            deleteBtn.addEventListener('click', function () {
                 deleteContact(id);
             })
             document.getElementById('nameInput').value = "";
@@ -170,8 +196,10 @@ window.onload = function() {
             document.getElementById('telInput').value = "";
             document.getElementById('emailInput').value = "";
             document.getElementById('birthInput').value = "";
+            document.getElementById('myFileInput').value = "";
         });
 
+        
         
         list.innerHTML = '';
         list.appendChild(fragment);
@@ -181,7 +209,11 @@ window.onload = function() {
 function getId() {
         return '_' + Math.random().toString(36).substr(2, 9);
     };
+
+    
 }
+
+
 function removeAll(){
     if(window.confirm("This action will remove all contacts. Are you sure?")){
         window.localStorage.clear();

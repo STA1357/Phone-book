@@ -6,6 +6,7 @@
     <title>Phone Book</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./app.js"></script>
+    
 </head>
 <body>
     <div class="dateNow">
@@ -53,6 +54,11 @@
                 <input type="date" class="form-input" id="birthInput">
                 <small>Field is required</small>
                 </div>
+
+                <div class="form-control-img">
+                    <label for="photo">Add photo:</label>
+                    <input type="file" id="myFileInput" onchange="previewFile()"><br>
+                </div>
                 
             </div>
             
@@ -71,6 +77,18 @@
     <img src="./delete.png" class="delete-png">
     <button id="clearBookBtn" class="clearBookBtn" onclick="removeAll()">Remove all Contacts</button>
 </div>
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span id="close" class="close">&times;</span>
+        <p id="modalP"></p>
+    </div>
+    
+</div>
+
+
 
 </body>
 </html>
