@@ -144,7 +144,7 @@ window.onload = function() {
             userTel.value = phone;
             userEmail.value = mail;
             userBirth.value = birthDay;
-            userPhoto.value = photo;
+            
     }
 
     function generateContactList() {
@@ -169,6 +169,8 @@ window.onload = function() {
             const infoListPhoto = document.createElement('img');
             infoListPhoto.className = "infoListPhoto";
             infoListPhoto.alt = "Image preview...";
+
+            
             let size = '70px';
             infoListPhoto.height = size;
             infoListPhoto.width = size;
@@ -200,7 +202,6 @@ window.onload = function() {
         });
 
         
-        
         list.innerHTML = '';
         list.appendChild(fragment);
 
@@ -224,3 +225,18 @@ function newFunction() {
     return document.getElementById('contactsCount');
 }
 
+function previewFile() {
+    var preview = document.getElementsByClassName('infoListPhoto')
+    var file    = document.querySelector('input[type=file]').files[0];
+    var reader  = new FileReader();
+
+    reader.onloadend = function () {
+    preview.src = reader.result;
+    }
+
+    if (file) {
+    reader.readAsDataURL(file);
+    } else {
+    preview.src = "";
+    }
+}
