@@ -24,40 +24,41 @@
             <div class="container">
 
                 <div class="form-control">
-                <label for="name">Name:</label>
+                <label for="nameInput">Name:</label>
                 <input type="text" class="form-input" id="nameInput">
                 <small>Field is required</small>
                 </div>
 
                 <div class="form-control">
-                <label for="lname">Last name:</label>
+                <label for="lnameInput">Last name:</label>
                 <input type="text" class="form-input" id="lnameInput">
                 <small>Field is required</small>
                 </div>
 
                 <div class="form-control">
-                <label for="tel">Phone:</label>
-                <input type="text" class="form-input" id="telInput" class="tellinput">
+                <label for="telInput">Phone:</label>
+                <input type="text" class="form-input" id="telInput">
                 <small>Field is required</small>
                 </div>
                 
 
                 <div class="form-control">
-                <label for="email">Email:</label>
+                <label for="emailInput">Email:</label>
                 <input type="email" class="form-input" id="emailInput">
                 <small>Field is required</small>
                 </div>
                 
 
                 <div class="form-control">
-                <label for="birthname">Birth-day:</label>
+                <label for="birthInput">Birth-day:</label>
                 <input type="date" class="form-input" id="birthInput">
                 <small>Field is required</small>
                 </div>
 
-                <div class="form-control-img">
-                    <label for="photo">Add photo:</label>
-                    <input type="file" id="myFileInput" onchange="previewFile()"><br>
+                <div class="form-control form-control-img">
+                    <img src="" id="avatarImage" class="avatar">
+                    <label for="avatarInput">Add photo:</label>
+                    <input type="file" id="avatarInput" onchange="onAvatarInput(this)"><br>
                 </div>
                 
             </div>
@@ -70,7 +71,7 @@
     </form>
 <div class="list-container">
     <h2 class="listTitle">Contact List:</h2>
-    <ul id="users"></ul>
+    <div id="users"></div>
 </div>
 
 <div class="clearBook">

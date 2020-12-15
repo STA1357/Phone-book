@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    
 }
 
 body{
@@ -15,7 +14,6 @@ body{
 }
 
 .header-title{
-    
     color: white;
     text-shadow: 0.5px 0.5px black;
 }
@@ -45,10 +43,9 @@ main{
     background-color: rgba(144, 156, 179, 0.589);
     width: 400px;
     max-width: 100%;
-    page-break-after: 30px 40px;
     border-radius: 5px;
-    max-height: 555px;
-    overflow: auto;
+    max-height: 557px;
+    padding: 0;
 }
 
 .listTitle{
@@ -56,16 +53,53 @@ main{
     text-shadow: 0.7px 0.7px black;
     font-size: 32px;
     margin-top: 20px;
-    margin-bottom: 20px;
     position: sticky;
     top: 20px;
     background-color: rgba(116, 123, 138, 0.589);
+}
+
+#users {
+    max-height: 480px;
+    overflow: auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.infoListPhoto {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.contact-avatar {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contact-data {
+    flex: 1;
+    margin-left: 5px;
+}
+
+.deleteBtn {
+    height: 30px;
 }
 
 .titleLi{
     color: white;
     text-shadow: 0.7px 0.7px black;
     font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
 }
 
 .infoList{
@@ -128,11 +162,6 @@ label{
 
 div{
     padding: 5px;
-}
-
-li{
-    font-weight: bold;
-    font-style: italic;
 }
 
 .clearBook{
